@@ -34,11 +34,11 @@ COPY --from=builder /app /app
 COPY scripts/* /app/
 
 #
-RUN mkdir /app/config/
-RUN ln -s /app/config /home/visitor/.config/
+RUN mkdir -p /app/config/ /home/visitor/.config/Epic
+RUN ln -s /app/config /home/visitor/.config/Epic
 
 #
-RUN chown visitor:visitor /app
+RUN chown visitor:visitor /app /home/visitor/.config
 
 # Switch to the non-root user
 USER visitor
