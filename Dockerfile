@@ -35,7 +35,7 @@ COPY scripts/* /app/
 
 #
 RUN mkdir /app/config/
-RUN ln -s /app/config /home/visitor/.config/Epic
+RUN ln -s /app/config /home/visitor/.config/
 
 #
 RUN chown visitor:visitor /app
